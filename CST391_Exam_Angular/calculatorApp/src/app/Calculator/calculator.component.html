@@ -1,0 +1,25 @@
+<div>
+  <form (ngSubmit)="onSubmit()" #createForm="ngForm" ngNativeValidate>
+    <div class="form-group">
+      <div class="form-group">
+        <label for="num1">First Number</label>
+        <input id="num1" type="number" class="form-control" required [(ngModel)]="calc.Num1" name="num1">
+      </div>
+      <div class="form-group">
+        <label for="num2">Stock</label>
+        <input id="num2" type="number" class="form-control" required [(ngModel)]="calc.Num2" name="num2">
+      </div>
+      <div>
+        <input type="radio" id="add" name="operation" value="add" [(ngModel)]="calc.Operation">
+        <label for="add">Add</label><br>
+        <input type="radio" id="subtract" name="operation" value="subtract" [(ngModel)]="calc.Operation">
+        <label for="subtract">Subtract</label><br>
+        <input type="radio" id="multiply" name="operation" value="multiply" [(ngModel)]="calc.Operation">
+        <label for="multiply">Multiple</label><br>
+        <input type="radio" id="divide" name="operation" value="divide" [(ngModel)]="calc.Operation">
+        <label for="divide">Divide</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
