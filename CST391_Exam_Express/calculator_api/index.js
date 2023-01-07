@@ -20,6 +20,9 @@ app.get('/info', function (_req, res)
 app.post('/calculate/:num1/:num2/:operation', function (req, res)
 {
     let api = new CalcApi();
+    if(parseInt(req.params.num2) == 0){
+        res.json("Cant divide by zero");
+    }
     res.json(api.calculate(parseInt(req.params.num1), parseInt(req.params.num2), req.params.operation));
 })
 
