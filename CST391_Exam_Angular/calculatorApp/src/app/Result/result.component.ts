@@ -1,19 +1,16 @@
 import { Component, OnInit} from '@angular/core';
 import { MusicServiceService} from '../service/music-service.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
-  selector: 'app-list-books',
-  templateUrl: './list-books.component.html',
-  styleUrls: ['./list-books.component.css'],
+  selector: 'app-list-results',
+  templateUrl: './result.component.html',
 })
-export class ListBooksComponent implements OnInit
+export class ResultComponent
 {
 
-  constructor(private service: MusicServiceService) { }
+  constructor( private route: ActivatedRoute) { }
 
-  ngOnInit()
-  {
-
-  }
+  result:number = parseInt(this.route.snapshot.paramMap.get('result'));
 
 }

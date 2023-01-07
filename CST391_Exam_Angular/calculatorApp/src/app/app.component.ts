@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent
 {
-  title = 'My Book Collection';
+  title = 'My Calculator';
   version = "1.0";
 
   constructor(private router: Router)
@@ -21,9 +21,4 @@ export class AppComponent
     alert(this.title + " Version: " + this.version);
   }
 
-  public displayBookList()
-  {
-    console.log("In App Component");
-    this.router.navigate(['list-books']);
-  }
 }
